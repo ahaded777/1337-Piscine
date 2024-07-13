@@ -1,0 +1,30 @@
+reverse_bits/reverse_bits.c:23:1: error: expected '}'
+^
+reverse_bits/reverse_bits.c:2:1: note: to match this '{'
+{
+^
+1 error generated.
+
+a$
+M-^F$
+\n
+\n
+-------
+
+1$
+M-^L$
+\n
+\n
+-------
+
+3$
+Ì$
+\n
+\n
+-------
+
+w$
+î$
+\n
+\n
+-------
