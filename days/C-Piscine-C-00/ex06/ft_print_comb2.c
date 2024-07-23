@@ -17,43 +17,27 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	int_to_char(int i)
+void	ft_print_comb2(void)
 {
 	int	a;
 	int	b;
 
-	if (i < 10)
+	a = 0;
+	b = 0;
+	while (a <= 98)
 	{
-		ft_putchar('0');
-		ft_putchar(i + '0');
-	}
-	else
-	{
-		a = i / 10;
-		b = i % 10;
-		ft_putchar(a + '0');
-		ft_putchar(b + '0');
-	}
-}
-
-void	ft_print_comb2(void)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (i <= 98)
-	{
-		j = i + 1;
-		while (j <= 99)
+		b = a + 1;
+		while (b <= 99)
 		{
-			int_to_char(i);
+			ft_putchar((a / 10) + '0');
+			ft_putchar((a % 10) + '0');
 			ft_putchar(' ');
-			int_to_char(j);
-			if (i < 98)
-				write(1, ", ", 1);
-			j++;
+			ft_putchar((b / 10) + '0');
+			ft_putchar((b % 10) + '0');
+			if (a != 98 || b != 99)
+				write(1, ", ", 2);
+			b++;
 		}
-		i++;
+		a++;
 	}
 }
